@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 int main() {
 
     // Declaração das variáveis das cartas
@@ -9,6 +10,15 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontos_turisticos1, pontos_turisticos2;
+
+    // Menu de interação do jogo
+
+    printf("§§§§ SUPER TRUNGO §§§§ \n");
+    printf("Escolha uma opção: \n");
+    printf("1. JOGAR 🎮 \n");
+    printf("2. REGRAS 📜\n");
+    printf("3. FINALIZAR 🚫 \n");
+    printf("Escolha: ");
 
     // Entrada dos dados da primeira carta
     printf("Digite o estado (A-H) da Carta 1: ");
@@ -116,6 +126,14 @@ int main() {
 
     // Comparação Super Poder
     printf("Super Poder: Carta 1 venceu (%d)\n", superPoder1 > superPoder2);
+
+    if (populacao1 > populacao2){
+    printf("A carta 1 venceu \n");
+    
+    } else {
+
+        printf("A carta 2 venceu \n");
+    }
 
     return 0;
 }
