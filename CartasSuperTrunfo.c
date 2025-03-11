@@ -21,7 +21,7 @@ int main()
     // Menu de interação do jogo
 
     imprimir_borda();
-    printf("SUPER TRUNGO \n");
+    printf("SUPER TRUNFO \n");
     imprimir_borda();
 
     printf("Escolha uma opção: \n");
@@ -69,6 +69,7 @@ int main()
         float superPoder1 = populacao1 + area1 + pib1 + pontos_turisticos1 + pib_Per_Capita1 + inverso_Densidade1;
 
         // Exibição dos dados da primeira carta
+        printf("\n-------------------------- Carta 1 --------------------------");
         printf("\n\nCarta 1:\n");
         printf("Estado: %c\n", estado1);
         printf("Código: %s\n", codigo1);
@@ -80,7 +81,7 @@ int main()
         printf("Densidade Populacional: %.2f hab/km²\n", Densidade_Populacional1);
         printf("PIB Per Capita: %.2f reais\n", pib_Per_Capita1);
         printf("Super Poder: %.2f\n", superPoder1);
-        imprimir_borda();
+        printf("---------------------------------------------------------------\n");
 
         // Entrada dos dados da segunda carta
         printf("\nDigite o estado (A-H) da Carta 2: ");
@@ -111,6 +112,7 @@ int main()
         float superPoder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + pib_Per_Capita2 + inverso_Densidade2;
 
         // Exibição dos dados da segunda carta
+        printf("\n-------------------------- Carta 2 --------------------------");
         printf("\nCarta 2:\n");
         printf("Estado: %c\n", estado2);
         printf("Código: %s\n", codigo2);
@@ -122,7 +124,7 @@ int main()
         printf("Densidade Populacional: %.2f hab/km²\n", Densidade_Populacional2);
         printf("PIB Per Capita: %.2f reais\n", pib_Per_Capita2);
         printf("Super Poder: %.2f\n", superPoder2);
-        imprimir_borda();
+        printf("---------------------------------------------------------------\n");
 
         // Comparação dos Atributos
 
@@ -143,90 +145,109 @@ int main()
         switch (escolhaAtributo)
         {
         case 1:
+        printf("Cidades: %s vs %s \n", nome1, nome2);
+        printf("Atributo comparado: População \n");
+        printf("Valores dos atributos: %u e %u\n", populacao1, populacao2);
+
             if (populacao1 > populacao2)
             {
-                printf("\n Carta 1 venceu! \n");
+                printf("\n🎉Carta 1 venceu!🎉 \n");
             }
             else if (populacao1 == populacao2)
             {
-                printf("\n Empate! \n");
+                printf("\n🤝Empate!🤝 \n");
             }
             else
             {
-                printf("\n Carta 2 venceu! \n");
+                printf("\n🎉Carta 2 venceu!🎉 \n");
             }
-
+            imprimir_borda();
             break;
 
         case 2:
+        printf("Cidades: %s vs %s \n", nome1, nome2);
+        printf("Atributo comparado: Área \n");
+        printf("Valores dos atributos: %.2f e %.2f\n", area1, area2);
+
             if (area1 > area2)
             {
-                printf("\n Carta 1 venceu! \n");
+                printf("\n🎉Carta 1 venceu!🎉 \n");
             }
             else if (area1 == area2)
             {
-                printf("\n Empate! \n");
+                printf("\n🤝Empate!🤝 \n");
             }
             else
             {
-                printf("\n Carta 2 venceu! \n\n");
+                printf("\n🎉Carta 2 venceu!🎉 \n\n");
             }
-
-            printf("Cidades: %s vs %s \n", nome1, nome2);
-            printf("Atributo comparado: Área");
-            printf("Valores dos atributos: %.2f e %.2f\n", area1, area2);
+            imprimir_borda();
             break;
 
         case 3:
+        printf("Cidades: %s vs %s \n", nome1, nome2);
+        printf("Atributo comparado: PIB \n");
+        printf("Valores dos atributos: %.2f e %.2f\n", pib1, pib2);
+
             if (pib1 > pib2)
             {
-                printf("\n Carta 1 venceu! \n");
+                printf("\n🎉Carta 1 venceu!🎉 \n");
             }
             else if (pib1 == pib2)
             {
-                printf("\n Empate! \n");
+                printf("\n🤝Empate!🤝 \n");
             }
             else
             {
-                printf("\n Carta 2 venceu! \n");
+                printf("\n🎉Carta 2 venceu!🎉 \n");
             }
+            imprimir_borda();
             break;
 
         case 4:
+        printf("Cidades: %s vs %s \n", nome1, nome2);
+        printf("Atributo comparado: Pontos turisticos \n");
+        printf("Valores dos atributos: %.2f e %.2f\n", pontos_turisticos1, pontos_turisticos2);
+
             if (pontos_turisticos1 > pontos_turisticos2)
             {
-                printf("\n Carta 1 venceu! \n");
+                printf("\n🎉Carta 1 venceu!🎉 \n");
             }
             else if (pontos_turisticos1 == pontos_turisticos2)
             {
-                printf("\n Empate! \n");
+                printf("\n🤝Empate!🤝 \n");
             }
             else
             {
-                printf("\n Carta 2 venceu! \n");
+                printf("\n🎉Carta 2 venceu!🎉 \n");
             }
+            imprimir_borda();
             break;
 
         case 5:
-            if (Densidade_Populacional1 > Densidade_Populacional2)
+        printf("Cidades: %s vs %s \n", nome1, nome2);
+        printf("Atributo comparado: Densidade Populacional \n");
+        printf("Valores dos atributos: %.2f e %.2f \n", Densidade_Populacional1, Densidade_Populacional2);
+
+            if (Densidade_Populacional1 < Densidade_Populacional2)
             {
-                printf("\n Carta 1 venceu! \n");
+                printf("\n🎉Carta 1 venceu!🎉 \n");
             }
             else if (Densidade_Populacional1 == Densidade_Populacional2)
             {
-                printf("\n Empate! \n");
+                printf("\n🤝Empate!🤝 \n");
             }
             else
             {
-                printf("\n Carta 2 venceu! \n");
+                printf("\n🎉Carta 2 venceu!🎉 \n");
             }
+            imprimir_borda();
             break;
 
         default:
-            printf("\nOpção inválida! Tente novamente.\n");
+            printf("\n😕 Opção inválida! Por favor, escolha uma opção entre 1 e 5.\n");
             break;
         }
-
         break;
     case 2:
         // Mostrar as regras
@@ -242,7 +263,7 @@ int main()
         break;
 
     default:
-        printf("\nOpção inválida! Tente novamente.\n");
+        printf("\n😕 Opção inválida! Por favor, escolha uma opção entre 1 e 3.\n");
         break;
     }
 
